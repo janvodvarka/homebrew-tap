@@ -1,6 +1,6 @@
 cask "focuset" do
-  version "0.12.1"
-  sha256 "3b4b04e41e3aa67af8b9f0cfd8d59b74ba6348647e37868a8fac047e98970f75"
+  version "0.12.2"
+  sha256 "d58b5806c9b75107aa8542f5269935c28edc6290a360722549f254b05b4707cc"
 
   url "https://github.com/janvodvarka/focuset-releases/releases/download/v#{version}/Focuset.dmg"
   name "Focuset"
