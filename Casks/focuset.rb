@@ -13,13 +13,13 @@ cask "focuset" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Focuset.app"
 
   # Not notarized yet: clear the quarantine flag so the first launch doesn't hit Gatekeeper
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Focuset.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Focuset.app"]
   end
 
   zap trash: [
